@@ -8,7 +8,8 @@ const EditBook = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [id, setId] = useState(location.state.id);
+  // Initialize id directly without using setId
+  const [id] = useState(location.state.id);
   const [title, setTitle] = useState(location.state.title);
   const [author, setAuthor] = useState(location.state.author);
 
