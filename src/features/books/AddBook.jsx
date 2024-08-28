@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux"; // Removed useSelector
 import { useNavigate } from "react-router-dom";
 import { addBook } from "./BooksSlice";
 import { v4 as uuidv4 } from "uuid";
@@ -16,6 +16,7 @@ const AddBook = () => {
     dispatch(addBook(book));
     navigate("/show-books", { replace: true });
   };
+
   return (
     <div>
       <h2>Add Book</h2>
@@ -49,4 +50,3 @@ const AddBook = () => {
 };
 
 export default AddBook;
-
